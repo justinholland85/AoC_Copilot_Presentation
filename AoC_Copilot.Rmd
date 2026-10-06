@@ -1,0 +1,13 @@
+---
+title: "AoC_Copilot_Presentation"
+author: "Justin Holland"
+date: "2026-10-06"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
