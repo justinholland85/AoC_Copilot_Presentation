@@ -1,8 +1,10 @@
 ---
-title: "AoC_Copilot_Presentation"
+title: "AoC Copilot Presentation"
 author: "Justin Holland"
 date: "2026-10-06"
-output: ioslides_presentation
+output: 
+  ioslides_presentation:
+     css: styles.css
 ---
 
 ```{r setup, include=FALSE}
@@ -11,3 +13,15 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 
+## Background
+
+- RAB Day-In presentation from Taylor Ey from Melbourne university.
+  - Thorough and interesting
+  - Quite high-level and theoretical
+  - Light on tangible examples
+- Taylor said we could all implment the things he was talking about.
+  - I wanted to put that to the test.
+  - Make a quick and light but non-trivial example on
+- I will walk through my toy example
+  - All done at home
+  - Getting more familiar with AI assisted coding. 
