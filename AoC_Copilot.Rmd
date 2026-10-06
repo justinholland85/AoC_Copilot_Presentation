@@ -57,10 +57,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ::: {}
 <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: 135px 135px; gap: 10px; justify-items: center; align-items: center; margin-top: 12px;">
-  <img src="Images/Advent_of_code_1.png" alt="Advent of Code screenshot 1" style="position: absolute; left: 1%; top: 70%; width: 30%;">
-  <img src="Images/Advent_of_code_2.png" alt="Advent of Code screenshot 2" style="position: absolute; left: 53%; top: 80%; width: 40%;">
-  <img src="Images/Advent_of_code_3.png" alt="Advent of Code screenshot 3" style="position: absolute; left: 1%; top: 90%; width: 50%;">
-  <img src="Images/Advent_of_code_4.png" alt="Advent of Code screenshot 4" style="position: absolute; left: 43%; top: 20%; width: 40%;">
+  <div class="build"><img src="Images/Advent_of_code_1.png" alt="Advent of Code screenshot 1" class="build" style="position: absolute; left: 1%; top: 70%; width: 30%;"></div>
+  <div class="build"><img src="Images/Advent_of_code_2.png" alt="Advent of Code screenshot 2" class="build" style="position: absolute; left: 53%; top: 80%; width: 45%;"></div>
+  <div class="build"><img src="Images/Advent_of_code_4.png" alt="Advent of Code screenshot 4" class="build" style="position: absolute; left: 47%; top: 18%; width: 42%;"></div>
+  <div class="build"><img src="Images/Advent_of_code_3.png" alt="Advent of Code screenshot 3" class="build" style="position: absolute; left: 1%; top: 90%; width: 50%;"></div>
+
 </div>
 :::
 :::
