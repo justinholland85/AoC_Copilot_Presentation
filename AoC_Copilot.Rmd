@@ -15,13 +15,28 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Background
 
-- RAB Day-In presentation from Taylor Ey from Melbourne university.
-  - Thorough and interesting
-  - Quite high-level and theoretical
-  - Light on tangible examples
-- Taylor said we could all implment the things he was talking about.
-  - I wanted to put that to the test.
-  - Make a quick and light but non-trivial example on
-- I will walk through my toy example
-  - All done at home
-  - Getting more familiar with AI assisted coding. 
+> - RAB Day-In presentation from Taylor Ey from Melbourne Institute
+>   - Thorough and interesting
+>   - Quite high-level and theoretical
+>   - Light on tangible examples
+> - Taylor said we could all implement the things he was talking about.
+>   - I wanted to put that to the test.
+>   - Make a quick, light, non-trivial example 
+> - I will walk through my toy example
+>   - All done at home
+>   - Getting more familiar with AI assisted coding. 
+
+## Preview
+
+> A basic AI coding agent with:
+
+> - Instructions
+>    - project-specific guidance
+> - MCP 
+>   - access to external tools and information
+> - Skills
+>    -  repeatable instructions and workflows
+> - Sub-agents 
+>   - getting multiple agents to work independently
+> - Hooks 
+>   - triggering actions automatically when something happens
