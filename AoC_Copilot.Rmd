@@ -16,15 +16,13 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Background
 
-> - RAB Day-In presentation from Taylor Ey from Melbourne Institute
->   - Thorough and interesting
->   - Quite high-level and theoretical
->   - Light on tangible examples
+> - RAB Day-In presentation from Taylor Ey from Melbourne Institute.
+>   - Explanation of key components of an AI agent harness.
 > - Taylor said we could all implement the things he was talking about.
 >   - I wanted to put that to the test.
 >   - Make a quick, light, non-trivial example 
 > - I will walk through my toy example
->   - All done at home
+>   - All done on my personal / home computer. 
 >   - Getting more familiar with AI assisted coding. 
 
 ## Preview
@@ -65,3 +63,188 @@ knitr::opts_chunk$set(echo = FALSE)
 </div>
 :::
 :::
+
+## Advent of Code - 1 December 2025 
+
+<img src="Images/AoC_2025_01.png" alt="Advent of Code 1 December 2025 — ChatGPT interpretation" style="display: block; max-width: 100%; max-height: 540px; width: auto; height: auto; object-fit: contain; margin: 0 auto;">
+
+## Why Advent of Code a good test case:
+
+> - **A repeated coding task**
+>   - Lots of independent examples with consistent structure
+>   - Each puzzle comes with its own instructions and input data
+> - **A test of AI problem-solving and coding**
+>   - Each puzzle is an independent challenge
+>   - Easy to check whether the answer is correct
+> - **I already have a well-structured benchmark**
+>   - My own solutions provide a point of comparison
+> - **It might actually be useful**
+>   - Help me learn Python
+>   - Help me discover better algorithms  
+
+## What we are going to build
+
+::: {.build}
+> **An agent that will:**
+:::
+
+> - Take an **input of year and day**
+> - Go to my **online Advent of Code repository**
+>   - Obtain the puzzle instructions and input data
+>   - Copy them to the local repository
+> - **Solve the puzzle in R**
+> - **Solve the puzzle independently in Python**
+> - **Compare the two solutions conceptually**
+
+## How we are going to build it
+
+::: {.build}
+> **We will give the agent:**
+:::
+
+> - **Project-specific instructions**
+>   - Context, goals, coding guidance and project conventions
+> - **MCP**
+>   - Access to my online GitHub repositories
+> - **Skills**
+>   - Procedures for solving problems in R and Python
+> - **Sub-agents**
+>   - Run the R and Python skills independently and in parallel
+> - **A hook**
+>   - Automatically update a comparison document when a solution changes
+
+## The environment
+
+::: {.build}
+> **Where the experiment lives:**
+:::
+
+> - **GitHub**
+>   - Source code and repositories
+> - **VS Code**
+>   - Development environment
+> - **GitHub Copilot**
+>   - AI coding agent
+> - **A local working repository**
+>   - Where the experiment happens
+
+## Visual Studio Code
+
+<img src="Images/VSCode_annotations.png" alt="Visual Studio Code with annotations" style="display: block; max-width: 100%; max-height: 540px; width: auto; height: auto; object-fit: contain; margin: 0 auto;">
+
+## GitHub — the source and the sandbox
+
+::: {.build}
+> **GitHub provides the files, tools and version control**
+:::
+
+> - **Advent of Code repository**
+>   - Previous puzzles and my solutions
+> - **R library**
+>   - My reusable functions and code
+> - **AoC_Copilot working repository**
+>   - Where the AI experiment takes place
+> - **Git**
+>   - Provides a safety net — changes can be reviewed and reverted
+
+## Github
+
+<img src="Images/Github.png" alt="Github" style="display: block; max-width: 100%; max-height: 540px; width: auto; height: auto; object-fit: contain; margin: 0 auto;">
+
+## VS Code + GitHub Copilot
+
+::: {style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 24px; align-items: start;"}
+
+::: {}
+::: {.build}
+> **VS Code is the workspace**
+:::
+
+> - Install the **GitHub Copilot extension**
+> - Sign in with your GitHub account
+> - Copilot appears directly inside VS Code
+> - The agent can **read and modify files in the project**
+:::
+
+::: {}
+<img src="Images/GithubCopilot.png" alt="GitHub Copilot" style="display: block; width: 50vw; max-width: 100%; height: auto; object-fit: contain;">
+:::
+
+:::
+
+
+
+
+## VS Code + GitHub Copilot
+
+<img src="Images/GithubCopilot.png" alt="GitHub Copilot" style="display: block; max-width: 100%; max-height: 540px; width: auto; height: auto; object-fit: contain; margin: 0 auto;">
+
+## Instructions
+
+::: {.build}
+Instructions are a markdown (.md) document that give the AI project-specific context and constraints.
+:::
+
+::: {.build}
+They can tell the agent:
+:::
+
+> - What the project is
+> - What we are trying to achieve
+> - How we want the code written
+> - What conventions to follow
+
+::: {.build}
+They provide persistent guidance that the agent can use when working on the project.
+:::
+
+::: {.build}
+Think of them as project-specific instructions for the AI.
+:::
+
+## Instrucwtions Example
+
+<img src="Images/Instructions.png" alt="Instructions example" style="display: block; max-width: 100%; max-height: 540px; width: auto; height: auto; object-fit: contain; margin: 0 auto;">
+
+## Setup with instructions
+
+<img src="Images/Demo_A.png" alt="Demo instructions" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;">
+
+## MCP — Model Context Protocol
+
+::: {.build}
+MCP gives the AI access to external tools and information.
+:::
+
+::: {.build}
+MCP servers are typically provided by third parties and installed separately.
+:::
+
+
+::: {.build}
+In this example, MCP lets Copilot:
+:::
+
+> - Connect to GitHub
+> - Find my Advent of Code repository
+> - Read the puzzle instructions and input data
+> - Bring that information into the coding workflow
+
+::: {.build}
+MCP gives the agent a way to reach beyond its local project.
+:::
+
+::: {.build}
+**Instructions** → tell the agent how to work  
+**MCP** → gives the agent access to things it couldn't access before
+:::
+
+## MCP installation in VS Code
+
+<img src="Images/MCP.png" alt="MCP installation" style="display: block; max-width: 100%; max-height: 540px; width: auto; height: auto; object-fit: contain; margin: 0 auto;">
+
+## MCP Demo
+
+<img src="Images/Demo_B.png" alt="MCP demo" style="display: block; max-width: 100%; max-height: 540px; width: auto; height: auto; object-fit: contain; margin: 0 auto;">
+
+
