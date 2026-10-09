@@ -202,7 +202,7 @@ They provide persistent guidance that the agent can use when working on the proj
 Think of them as project-specific instructions for the AI.
 :::
 
-## Instrucwtions Example
+## Instructions Example
 
 <img src="Images/Instructions.png" alt="Instructions example" style="display: block; max-width: 100%; max-height: 540px; width: auto; height: auto; object-fit: contain; margin: 0 auto;">
 
@@ -246,5 +246,30 @@ MCP gives the agent a way to reach beyond its local project.
 ## MCP Demo
 
 <img src="Images/Demo_B.png" alt="MCP demo" style="display: block; max-width: 100%; max-height: 540px; width: auto; height: auto; object-fit: contain; margin: 0 auto;">
+
+## Skills
+
+::: {.build}
+Skills turn instructions into a repeatable procedure.
+:::
+
+> - Define a sequence of steps for the agent to follow.
+> - Capture a workflow that can be reused across different problems.
+> - Keep detailed procedures separate from the general project instructions.
+
+::: {.build}
+In this example:
+:::
+
+> - An R Skill explains how to retrieve, solve and test an AoC puzzle in R.
+> - A Python Skill does the same for Python.
+
+## Skill Example
+
+<img src="Images/Skill.png" alt="Skill example" style="display: block; max-width: 100%; max-height: 540px; width: auto; height: auto; object-fit: contain; margin: 0 auto;">
+
+----------
+
+<img src="Images/Demo_C.png" alt="Skills demo" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;">
 
 
