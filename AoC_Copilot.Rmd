@@ -44,25 +44,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Toy example – Advent of Code
 
-::: {style="display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 18px; align-items: start;"}
-
-::: {}
-> - **Annual Christmas-themed coding puzzles**
-> - Small programming and problem-solving challenges, released as an Advent calendar
-> - Puzzles can be solved in any programming language
-> - A link to the [Advent of Code website](https://adventofcode.com/?utm_source=chatgpt.com)
-:::
-
-::: {}
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: 135px 135px; gap: 10px; justify-items: center; align-items: center; margin-top: 12px;">
-  <div class="build"><img src="Images/Advent_of_code_1.png" alt="Advent of Code screenshot 1" class="build" style="position: absolute; left: 1%; top: 70%; width: 30%;"></div>
-  <div class="build"><img src="Images/Advent_of_code_2.png" alt="Advent of Code screenshot 2" class="build" style="position: absolute; left: 53%; top: 80%; width: 45%;"></div>
-  <div class="build"><img src="Images/Advent_of_code_4.png" alt="Advent of Code screenshot 4" class="build" style="position: absolute; left: 47%; top: 18%; width: 42%;"></div>
-  <div class="build"><img src="Images/Advent_of_code_3.png" alt="Advent of Code screenshot 3" class="build" style="position: absolute; left: 1%; top: 90%; width: 50%;"></div>
-
-</div>
-:::
-:::
+<img src="Images/Advent_of_code.png" alt="Advent of Code" style="display: block; max-width: 100%; max-height: 540px; width: auto; height: auto; object-fit: contain; margin: 0 auto;">
 
 ## Advent of Code - 1 December 2025 
 
@@ -112,6 +94,21 @@ knitr::opts_chunk$set(echo = FALSE)
 >   - Run the R and Python skills independently and in parallel
 > - **A hook**
 >   - Automatically update a comparison document when a solution changes
+
+## ChatGPT: My thinking partner
+
+::: {.build}
+**One continuous conversation** — discuss the project, goals and ideas in a single thread.
+:::
+
+> - **Work through the details** — explore implementation options, troubleshoot problems and refine the approach.
+> - **Generate the prompts** — turn ideas into the actual instructions used with Codex and Copilot.
+> - **Messy input is fine** — write informally, think aloud and change direction; ChatGPT helps organise it into something usable.
+> - **Context carries forward** — earlier decisions and explanations inform later work, including slide content.
+
+::: {.build}
+*I bring the ideas and direction; ChatGPT helps turn them into a workable plan and clear communication.*
+:::
 
 ## The environment
 
@@ -272,4 +269,69 @@ In this example:
 
 <img src="Images/Demo_C.png" alt="Skills demo" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;">
 
+## Sub-Agents
 
+::: {.build}
+Sub-agents allow an AI agent to delegate work to other AI agents.
+:::
+
+> - **Separate workers:** Each sub-agent can be given a specific task.
+> - **Independent work:** Sub-agents can work on separate parts of a problem without relying on each other's solutions.
+> - **Parallel execution:** Multiple sub-agents can work at the same time.
+> - **Specialised instructions:** Each can be configured to follow a particular role or workflow.
+
+::: {.build}
+In this example:
+:::
+
+> - An R sub-agent solves an Advent of Code puzzle using the R Skill.
+> - A Python sub-agent independently solves the same puzzle using the Python Skill.
+> - Both solutions can then be compared.
+
+## Sub-Agents
+
+<img src="Images/SubAgents.png" alt="Sub-agents" style="display: block; max-width: 100%; max-height: 540px; width: auto; height: auto; object-fit: contain; margin: 0 auto;">
+
+----------
+
+<img src="Images/Demo_D.png" alt="Agent demo" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;">
+
+## Hooks
+
+::: {.build}
+Hooks allow an agent to trigger an action automatically when a particular event occurs.
+:::
+
+> - **Event-driven:** A hook responds to something happening during the agent's workflow.
+> - **Automatic action:** It can prompt the agent to perform an additional task without the user having to request it separately.
+> - **Consistent behaviour:** Useful follow-up actions can be built into the workflow.
+
+::: {.build}
+In this example:
+:::
+
+> - When a solution changes, the hook prompts the agent to create or update a summary document.
+> - The summary records the solution's key algorithm, main steps and performance considerations.
+
+----------
+
+<img src="Images/Make_Hook.png" alt="Make Hook" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;">
+
+----------
+
+<img src="Images/Demo_E.png" alt="Hook demo" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;">
+
+## Making the Slides
+
+> - **Written in R Markdown** using the `ioslides` presentation format.
+> - **Built as a repository in VS Code**, with Codex generating and revising slides from prompts. I have access to Codex through my ChatGPT subscription.
+> - **Used ChatGPT separately** to combine screenshots into visual walkthroughs, annotate images, and refine the layout.
+> - **Iterative process:** describe what I wanted, review the output, and prompt for changes.
+
+::: {.build}
+*The same approach as the demo itself: use AI to produce something practical, then review and refine it.*
+:::
+
+----------
+
+<img src="Images/Making the Slides.png" alt="Making the Slides" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;">
